@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="author" content="Poly">
-  <title>404 Error</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<script>
-  // Get the pathname of the current URL
-  const path = window.location.pathname;
+  <head>
+    <meta name="author" content="Poly">
+    <title>404 Error</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
   
-  // Extract the last part (filename or folder)
-  let pageName = path.split("/").filter(Boolean).pop() || "home";
-
-  // Optionally remove file extension
-  pageName = pageName.replace(/\.[^/.]+$/, "");
-
-  // Capitalize first letter for display
-  pageName = pageName.charAt(0).toUpperCase() + pageName.slice(1);
-
-  // Replace placeholder text in your message
-  const messageElem = document.getElementById("page-name");
-  if (messageElem) {
-    messageElem.textContent = pageName;
-  }
-</script>
-
-<body>
-  <div class="body">
-    <h3><p>Oops! You either typed the url incorrectly,<br> or "<span id="page-name">this page</span>" does not exist!</p></h3>
-    <p><img src="../assets/404image.png" width="754" height="438" alt="404 image"></p>
-    <p><a href="index.html">Back to home page</a></p>
-  </div>
-</body>
+  <body>
+    <div class="body">
+      <h3><p>Oops! You probably typed the url incorrectly,<br> but "<span id="page-name">this page</span>" does not exist!</p></h3>
+      <p><img src="../assets/404image.png" width="754" height="438" alt="404 image"></p>
+      <p><a href="index.html">Back to home page</a></p>
+    </div>
+    
+    <script>
+      // Get the pathname of the current URL
+      const path = window.location.pathname;
+      
+      // Extract the last part (filename or folder)
+      let pageName = path.split("/").filter(Boolean).pop() || "home";
+    
+      // Optionally remove file extension
+      pageName = pageName.replace(/\.[^/.]+$/, "");
+    
+      // Capitalize first letter for display
+      pageName = pageName.charAt(0).toUpperCase() + pageName.slice(1);
+    
+      // Replace placeholder text in your message
+      const messageElem = document.getElementById("page-name");
+      if (messageElem) {
+        messageElem.textContent = pageName;
+      }
+    </script>
+  </body>
+</html>
