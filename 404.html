@@ -14,17 +14,19 @@
     </div>
     
     <script>
-      // Get the pathname of the current URL
-      const path = window.location.pathname;
+      document.addEventListener("DOMContentLoaded", () => {
+        let path = window.location.pathname;
+        let parts = path.split("/").filter(Boolean);
+        let lastPart = parts.pop() || "home";
       
-      // Extract the last part (filename or folder)
-      let pageName = path.split("/").filter(Boolean).pop() || "home";
-    
-      // Replace placeholder text in your message
-      const messageElem = document.getElementById("page-name");
-      if (messageElem) {
-        messageElem.textContent = pageName;
-      }
+        // If last part is index.html, use previous folder
+        if (lastPart.toLowerCase() === "index.html") {
+          lastPart = parts.pop() || "home";
+        }
+      
+        const messageElem = document.getElementById("page-name");
+        if (messageElem) messageElem.textContent = pageName;
+      });
     </script>
   </body>
 </html>
