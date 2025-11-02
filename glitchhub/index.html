@@ -6,8 +6,7 @@
     <meta name="description" content="The best site for playing games and watching movies in class!">
     <meta name="author" content="Poly">
     <title>GlitchHub</title>
-    <link rel="icon" type="image/x-icon" href="GlitchHub.ico"> <!-- default icon, changed in later script -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   
   <body>
@@ -35,8 +34,6 @@
       <p><a href="https://tylerpalko.github.io/gamehub/basketrandom/">Basket Random</a></p>
       <p><a href="https://tylerpalko.github.io/gamehub/boxingrandom/">Boxing Random</a></p>
       <p><a href="https://tylerpalko.github.io/gamehub/volleyrandom/">Volley Random</a></p>
-      <p><a href="https://tylerpalko.github.io/gamehub/soccerrandom/">Soccer Random</a></p>
-      <p><a href="https://tylerpalko.github.io/gamehub/cookieclicker/">Cookie Clicker</a></p>
       <p><a href="https://tylerpalko.github.io/gamehub/crazycattle3d/index-2.html">CrazyCattle3D</a></p>
       <p><a href="https://tylerpalko.github.io/gamehub/doodlejump/">Doodle Jump</a></p>
       <p><a href="https://tylerpalko.github.io/gamehub/ducklife/">Duck Life</a></p>
@@ -229,8 +226,8 @@
       
       //icon 
       (function() {
-        const darkIcon = "GlitchHub.ico";      // dark mode icon
-        const lightIcon = "GlitchHubLM.ico";   // light mode icon
+        const darkIcon = "../assets/GlitchHub.ico";      // dark mode icon
+        const lightIcon = "../assets/GlitchHubLM.ico";   // light mode icon
     
         function updateFavicon() {
           const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
