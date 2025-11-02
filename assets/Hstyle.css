@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comic+Neue');
 html {
-  font-size: 22px;
+  font-size: 27px;
   /* unselectable */
   user-select: none;
   -webkit-user-select: none;
@@ -61,12 +61,10 @@ a:hover {
 }
 .main, .body {
   text-align: center;
-  padding-top: 60px;   /* equal to .heading height */
-  padding-bottom: 50px; /* equal to .footer height */
 }
 .mintext {
   text-align: center;
-  font-size: 17px;
+  font-size: 20px;
   background-color: transparent;
   color: #777777;
 }
