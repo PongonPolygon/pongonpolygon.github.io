@@ -8,7 +8,7 @@
   
   <body>
     <div class="body">
-      <h3><p>Oops! You probably typed the url incorrectly,<br> but "<span id="page-name">this page</span>" does not exist!</p></h3>
+      <h3 style="font-weight: normal;">Oops! You probably typed the URL incorrectly,<br> but "<span id="page-name">PLACEHOLDER</span>" does not exist!</h3>
       <p><img src="../assets/404image.png" width="754" height="438" alt="404 image"></p>
       <p><a href="index.html">Back to home page</a></p>
     </div>
@@ -19,12 +19,6 @@
       
       // Extract the last part (filename or folder)
       let pageName = path.split("/").filter(Boolean).pop() || "home";
-    
-      // Optionally remove file extension
-      pageName = pageName.replace(/\.[^/.]+$/, "");
-    
-      // Capitalize first letter for display
-      pageName = pageName.charAt(0).toUpperCase() + pageName.slice(1);
     
       // Replace placeholder text in your message
       const messageElem = document.getElementById("page-name");
