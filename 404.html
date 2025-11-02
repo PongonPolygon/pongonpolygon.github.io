@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="author" content="Poly">
+    <meta http-equiv="refresh" content="0; url=https://pongonpolygon.github.io/" />
     <title>404 Error</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  
   <body>
-    <div class="body">
-      <h3 style="font-weight: normal;">Oops! You probably typed the URL incorrectly,<br> but "<span id="page-name">PLACEHOLDER</span>" does not exist!</h3>
-      <p><img src="../assets/404image.png" width="754" height="438" alt="404 image"></p>
-      <p><a href="index.html">Back to home page</a></p>
-    </div>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        let path = window.location.pathname;
-        let parts = path.split("/").filter(Boolean);
-        let lastPart = parts.pop() || "home";
-      
-        // If last part is index.html, use previous folder
-        if (lastPart.toLowerCase() === "index.html") {
-          lastPart = parts.pop() || "home";
-        }
-      
-        const messageElem = document.getElementById("page-name");
-        if (messageElem) messageElem.textContent = pageName;
-      });
-    </script>
   </body>
 </html>
