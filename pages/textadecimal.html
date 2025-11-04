@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Textadecimal - Text to Hex converter</title>
+    <link rel="stylesheet" href="../assets/Hstyle.css" />
+  </head>
+  <body>
+    <div class="body">
+      <h1>Textadecimal</h1>
+    </div>
+    <div class="body">
+      <h2>Text</h2>
+      <textarea id="textBox" rows="4" cols="50" style="background-color: #252540; color: white;"></textarea>
+  
+      <h2>Hexadecimal</h2>
+      <textarea id="hexBox" rows="4" cols="50" style="background-color: #252540; color: white;"></textarea>
+    </div>
+    <div class="mintext">
+      <p><a href="../">Home page</a></p>
+    </div>
+  
+    <script>
+      const textBox = document.getElementById('textBox');
+      const hexBox = document.getElementById('hexBox');
+      const encoder = new TextEncoder();
+      const decoder = new TextDecoder();
+  
+      let updating = false; // prevent feedback loop
+  
+      textBox.addEventListener('input', () => {
+        if (updating) return;
+        updating = true;
+        const bytes = encoder.encode(textBox.value);
+        hexBox.value = Array.from(bytes)
+          .map(b => b.toString(16).padStart(2, '0'))
+          .join(' ');
+        updating = false;
+      });
+  
+      hexBox.addEventListener('input', () => {
+        if (updating) return;
+        updating = true;
+        const cleanHex = hexBox.value.replace(/[^0-9a-fA-F]/g, '');
+        const bytes = new Uint8Array(cleanHex.match(/.{1,2}/g)?.map(b => parseInt(b, 16)) || []);
+        textBox.value = decoder.decode(bytes);
+        updating = false;
+      });
+      
+      // links
+        document.querySelectorAll("a").forEach(link => {
+          // Skip links that already contain an image (like your favicon or GitHub icon)
+          if (link.querySelector("img")) return;
+  
+          // Get domain name from link
+          let domain;
+          try {
+            domain = new URL(link.href).origin;
+          } catch {
+            return; // skip if invalid URL
+          }
+  
+          // Create favicon image
+          const icon = document.createElement("img");
+          icon.src = `https://www.google.com/s2/favicons?sz=32&domain_url=${domain}`;
+          icon.alt = "favicon";
+          icon.style.width = "1em";
+          icon.style.height = "1em";
+          icon.style.verticalAlign = "top";
+          icon.style.marginTop = "1px";
+          icon.style.marginRight = "10px";
+          icon.style.borderRadius = "25%";
+  
+          // Insert favicon before the link text
+          link.prepend(icon);
+        });
+    </script>
+  </body>
+</html>
