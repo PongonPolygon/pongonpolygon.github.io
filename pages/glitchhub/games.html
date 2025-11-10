@@ -3,14 +3,76 @@
   <head>
     <!-- Metadata for website bcuz otherwise it looks UGLY AF -->
     <meta charset="UTF-8">
-    <meta name="description" content="The best site for playing games and watching movies in class!">
-    <meta name="author" content="Poly">
-    <title>GlitchHub</title>
-    <link rel="stylesheet" href="../assets/GHstyle.css" />
+    <title>GlitchHub- Games</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+        html {
+          font-size: 22px;
+          /* unselectable */
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+        body {
+          background-color: #000014;
+          color: #ffffff;
+          font-family: 'Press Start 2P';
+          margin: 0; /* remove default page margin so fixed header/footer align flush */
+        }
+
+        /* Header */
+        .heading {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 60px; /* adjust as needed */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #000014; /* solid background */
+          z-index: 1000; /* ensure header sits above page content */
+          box-shadow: 0 2px 4px rgba(0,0,0,0);
+        }
+
+        a:link {
+          color: #66c0ff;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:visited {
+          color: #e875ff;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #bde4ff;  background-color: transparent;
+          text-decoration: ;
+        }
+        .main, .body {
+          text-align: center;
+          padding-top: 60px;   /* equal to .heading height */
+          padding-bottom: 50px; /* equal to .footer height */
+        }
+        .mintext {
+          text-align: center;
+          font-size: 17px;
+          background-color: transparent;
+          color: #777777;
+        }
+        .clean-line {
+          width: 80%;
+          height: 1px;
+          margin: 25px auto;
+          background: linear-gradient(90deg, transparent, #888, transparent);
+
+      </style>
   </head>
   
   <body>
-    <!-- title -->
+     <!-- title -->
     <div class="heading">
       <h1><span style="color: #ffffff;">Glitch</span><span style="color: #00ff9c;">Hub</span></h1>
     </div>
@@ -18,8 +80,9 @@
     <!-- main body -->
     <div class="body">
 
+      <h2><span style="background-color: #404070;"><a style="background-color: #404070;" href="https://pongonpolygon.github.io/pages/glitchhub/games.html">Games</a></span>&nbsp;<a href="https://pongonpolygon.github.io/pages/glitchhub/games.html">Movies</a></h2>
     <!-- games and stuff -->
-      <h2 style="display: inline; text-decoration: underline;">Games</h2>
+      <div class="clean-line"></div>
   
       <p><a href="https://tylerpalko.github.io/gamehub/1/">1</a></p>
       <p><a href="https://tylerpalko.github.io/gamehub/2048/">2048</a></p>
@@ -162,116 +225,6 @@
 
       <div class="clean-line"></div>
 
-      <!-- free movies and shows -->
-      <h2 style="display: inline; text-decoration: underline;">Movies and Shows</h2>
-
-      <p><a href="https://drive.google.com/drive/mobile/folders/1d-tAfmr_Qomv86YWrOIcSXHrAoRlkiAo?usp=drive_link">Sonic Movie 1, 2, 3</a></p>
-      <p><a href="https://drive.google.com/drive/u/0/mobile/folders/1w3o_qE2iwsj6XbA42mpGDGLX0Atgnc9k">South Park</a></p>
-      <p><a href="https://archive.org/details/aqq_20240331">Lego Batman Movie</a></p>
-      <p><a href="https://archive.org/details/ghost-stories-ADV">Ghost Stories Dub</a></p>
-      <p><a href="https://archive.org/details/helluva-boss-every-episode">Helluva Boss</a></p>
-      <p><a href="https://drive.google.com/drive/u/0/mobile/folders/1vE_GRWxF85bcek0-eItTM2vL3jALS45b?usp=drive_link">Hazbin Hotel</a></p>
-      <p><a href="https://drive.google.com/file/d/1IMm_z9dhm9w4bAMcxnruE7ZR6Mbzo92u/view">KPop Demon Hunters</a></p>
-      <p><a href="https://drive.google.com/drive/u/0/mobile/folders/19U1uKlpqFTGiwo9TaW9IhxckGqXLz_Nt">Arcane S1</a></p>
-      <p><a href="https://drive.google.com/drive/folders/1-YlQgRPH5hlT4iGgI2fV2-ldapdYWJ9X">Arcane S2</a></p>
-      <p><a href="https://drive.google.com/drive/u/0/mobile/folders/1j171tdwEP5nW4adlykuUIkvnnxd-QZtS">Steven Universe</a></p>
-      <p><a href="https://archive.org/details/one-crazy-summer_202408">Gravity Falls</a></p>
-      <p><a href="https://drive.google.com/drive/folders/1KZpVmcEVIXXle989eFtujR2sxvyWWO8D">Demon Slayer</a></p>
-      <p><a href="https://drive.google.com/drive/folders/1ACH9a2bLreMOADbSxRy6lQPwuoj66p7t">Invader Zim</a></p>
-      <p><a href="https://archive.org/details/a-minecraft-movie_202510">A Minecraft Movie</a></p>
-      <p><a href="https://youtube.com/playlist?list=PLNmbST1519bIgP3l01bwQEy_ehvvX9DDG&si=nvEWWFqBHfc5ztmw">Sonic Boom</a></p>
-      <p><a href="https://drive.google.com/drive/u/0/folders/1-OOdzY2lANvqfYs_MNTLdBYHfuDGlroI">Ninjago</a></p>
-      <p><a href="https://www.youtube.com/watch?v=jzfgwxENvLk">Raisin In The Sun (1989)</a></p>
-      <p><a href="https://drive.google.com/drive/u/0/folders/1OFWN8hASAuNWSn9mK2gANJ0PSQhvIA2r">Avatar: The Last Airbender</a></p>
-      <p><a href="https://archive.org/details/totoro-fox-dub">My Neighbor Totoro</a></p>
-      <p><a href="https://drive.google.com/file/d/11LHhwRkNzx82Bz5PCZOz4V1hSlszLZRb/view">Wicked</a></p>
-      <p><a href="https://archive.org/details/fantastic.-mr.-fox.-2009.720p.-br-rip.x-264.-yify">Fantastic Mr. Fox</a></p>
-      <p><a href="https://archive.org/details/mr-peabody-and-sherman_202208/MR_PEABODY_AND_SHERMAN.ISO">Mr. Peabody and Sherman</a></p>
-      <p><a href="https://archive.org/details/203fe130cf63eb5dc7a2adc12ec398bc6171d1c055d0cf64711bd5f9a9675bc5d81201d0f1641e00">Matilda</a></p>
-      <p><a href="https://archive.org/details/spider-man-across-the-spider-verse-2023-2160p-webrip-x-265-10bit-5.1-yts.-mx_202309">Spider-Man Across The Spider-Verse</a></p>
-      <p><a href="https://archive.org/details/hamilton-the-musical-live/Hamilton++Act+1.mp4">Hamilton</a></p>
-      <p><a href="https://archive.org/details/isle-of-dogs_202205">Isle Of Dogs</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Avengers%20-%20Infinity%20War.mp4">Avengers Infinity War</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Back%20to%20the%20Future.mp4">Back to the Future</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Beetlejuice.mp4">Beatlejuice</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Captain%20Underpants%20The%20First%20Epic%20Movie.mp4">Captian Underpants</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cars.mp4">Cars</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cars%202.mp4">Cars 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cars%203.mp4">Cars 3</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Casper.mp4">Casper</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Charlie%20and%20the%20Chocolate%20Factory.mp4">Charlie and the Chocolate Factory</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/A%20Bugs%20Life.mp4">A Bugs Life</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/A%20Goofy%20Movie.mp4">A Goofy Movie</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Alvin%20And%20The%20Chipmunks%20-%20The%20Road%20Chip.mp4">Alvain and the Chipmunks: The Road Chip</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Alvin%20And%20The%20Chipmunks.mp4">Alvain and the Chipmunks</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Alvin%20and%20the%20Chipmunks%20-%20Chip%20Wrecked.mp4">Alvain and the Chipmunks: Chip Wrecked</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Angry%20Birds.mp4">Angry Birds</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ant-Man%20and%20the%20Wasp.mp4">Ant-Man and the Wasp</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ant-Man.mp4">Ant-Man</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Assassin%27s%20Creed.mp4">Assasin's Creed</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Avengers%20-%20Endgame.mp4">Avengers Endgame</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Avengers%20-%20Age%20of%20Ultron.mp4">Avengers: Age of Ultron</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cinderella.mp4">Cinderella</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cloudy%20With%20A%20Chance%20Of%20Meatballs.mp4">Cloudy with a Chance of Meatballs</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cloudy%20with%20a%20Chance%20of%20Meatballs%202.mp4">Cloudy with a Chance of Meatballs 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Coraline.mp4">Coraline</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Deadpool.mp4">Deadpool</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Deadpool%202.mp4">Deadpool 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Despicable%20Me.mp4">Despicable Me</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Despicable%20Me%202.mp4">Despicable Me 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Despicable%20Me%203.mp4">Despicable Me 3</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Die%20Hard.mp4">Die Hard</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Die%20Hard%202.mp4">Die Hard 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Die%20Hard%203.mp4">Die Hard 3</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Elf.mp4">Elf</a></p>
-      <p><a href="https://ia601508.us.archive.org/35/items/movies_202211/Escape%20From%20The%20Planet%20of%20the%20Apes.mp4">Escape from The Planet of the Apes</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%201.mp4">Final Destination</a></p>
-      <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Final%20Destination%202.mp4">Final Destination 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%203.mp4">Final Destination 3</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%204%20-%20The%20Final%20Destination.mp4">Final Destination 4</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%205.mp4">Final Destination 5</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Flubber.mp4">Flubber</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Forrest%20Gump.mp4">Forest Gump</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Garfield.mp4">Garfield</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Hercules%20%281997%29.mp4">Hercules</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Holes.mp4">Holes</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Home%20Alone.mp4">Home Alone</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Home%20Alone%202%20-%20Lost%20in%20New%20York.mp4">Home Alone 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Home%20Alone%203.mp4">Home Alone 3</a></p>
-      <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/How%20To%20Train%20Your%20Dragon.mp4">How to Train your Dragon</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/How%20to%20Train%20Your%20Dragon%202.mp4">How to Train your Dragon 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/How%20the%20Grinch%20Stole%20Christmas.mp4">How The Grinch Stole Christmas</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age.mp4">Ice Age</a></p>
-      <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Ice%20Age%20-%20The%20Meltdown.mp4">Ice Age: The Meltdown</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20Dawn%20of%20The%20Dinosaurs.mp4">Ice Age: Dawn of The Dinosaurs</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20Continental%20Drift.mp4">Ice Age: Continental Drift</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20Collision%20Course.mp4">Ice Age: Collision Course</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20A%20Mammoth%20Christmas.mp4">Ice Age: A Mammoth Christmas</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/It.mp4">It</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Independence%20Day.mp4">Independence Day</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Independence%20Day%20-%20Resurgence.mp4">Independence Day: Resurgence</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Temple%20of%20Doom.mp4">Indiana Jones and the Temple of Doom</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Raiders%20of%20The%20Lost%20Ark.mp4">Indianda Jone and the Lost Arc</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Last%20Crusade.mp4">Indiana Jones and the Last Crusade</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Kingdom%20of%20the%20Crystal%20Skull.mp4">Indiana Jones and the Kindom of the Crystal Skull</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Iron%20Man.mp4">Iron Man</a></p>
-      <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Iron%20Man%202.mp4">Iron Man 2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Iron%20Man%203.mp4">Iron Man 3</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Deathly%20Hallows%20Part%201.mp4">Harry Potter and the Deathly Hallows Pt.1</a></p>
-      <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Harry%20Potter%20And%20The%20Deathly%20Hallows%20Part%202.mp4">Harry Potter and the Deathly Hallows Pt.2</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Chamber%20of%20Secrets.mp4">Harry Potter and the Chamber Of Secrets</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.mp4">Harry Potter and the Goblet of Fire</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Half%20Blood%20Prince.mp4">Harry Potter and the Half Blood Prince</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Order%20of%20the%20Phoenix.mp4">Harry Potter and the Order of the Phoenix</a></p>
-      <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Philosopher%27s%20Stone.mp4">Harry Potter and the Philosopher's Stone</a></p>
-      <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Harry%20Potter%20and%20the%20Prisoner%20of%20Azkaban.mp4">Harry Potter and the Prisoner of Azkaban</a></p>
-      <p><a href="https://dn720206.ca.archive.org/0/items/the.-martian.-2015.-extended.-1080p.-brrip.x-264.-aac-etrg/The.Martian.2015.EXTENDED.1080p.BRRip.x264.AAC-ETRG.mp4">The Martian</a></p>
-      <p><a href="https://bingewatch.to/series/watch-wednesday-hd-90553">Wednesday</a></p>
-      <p><a href="https://bingewatch.to/watch-series/watch-the-amazing-world-of-gumball-hd-39036/93462">The Amazing World Of Gumball</a></p>
-      <p><a href="https://bingewatch.to/watch-series/watch-the-wonderfully-weird-world-of-gumball-hd-128905/1573558">The Wonderfully Weird World Of Gumball</a></p>
-      
-      <div class="clean-line"></div>
-
       <div class="mintext">
         <p><a href="../">Home page</a></p>
       </div>
@@ -309,8 +262,8 @@
       
       //icon 
       (function() {
-        const darkIcon = "../assets/GlitchHub.ico";      // dark mode icon
-        const lightIcon = "../assets/GlitchHubLM.ico";   // light mode icon
+        const darkIcon = "../../assets/GlitchHub.ico";      // dark mode icon
+        const lightIcon = "../../assets/GlitchHubLM.ico";   // light mode icon
     
         function updateFavicon() {
           const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
