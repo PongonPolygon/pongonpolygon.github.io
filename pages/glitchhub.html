@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GlitchHub - Games</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+        html {
+          font-size: 22px;
+          /* unselectable */
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+        body {
+          background-color: #000014;
+          color: #ffffff;
+          font-family: 'Press Start 2P';
+          margin: 0; /* remove default page margin so fixed header/footer align flush */
+        }
+
+        /* Header */
+        .heading {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 60px; /* adjust as needed */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #000014; /* solid background */
+          z-index: 1000; /* ensure header sits above page content */
+          box-shadow: 0 2px 4px rgba(0,0,0,0);
+        }
+
+        a:link {
+          color: #66c0ff;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:visited {
+          color: #e875ff;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #bde4ff;  
+          background-color: transparent;
+        }
+        .main, .body {
+          text-align: center;
+          padding-top: 60px;   /* equal to .heading height */
+          padding-bottom: 50px; /* equal to .footer height */
+        }
+        .mintext {
+          text-align: center;
+          font-size: 17px;
+          background-color: transparent;
+          color: #777777;
+        }
+        .clean-line {
+          width: 80%;
+          height: 1px;
+          margin: 25px auto;
+          background: linear-gradient(90deg, transparent, #888, transparent);
+        }
+
+        /* Hidden Sections */
+        .section {
+          display: none;
+        }
+
+        /* Active Section */
+        .active {
+          display: block;
+        }
+
+        /* Styling for the active section button */
+        .active-button {
+          background-color: #404070;
+          cursor: pointer;
+        }
+        
+        .button:hover {
+          cursor: pointer;
+        }
+      
+        .inner {
+          margin: top;
+          padding: 0;
+        }
+
+    </style>
+  </head>
+  
+  <body>
+    <div class="heading">
+      <h1><span style="color: #ffffff;">Glitch</span><span style="color: #00ff9c;">Hub</span></h1>
+    </div>
+    
+    <div class="body">
+      <h2>
+        <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>&nbsp;
+        <span id="moviesButton" class="button" onclick="toggleSection('movies')">Movies</span>
+      </h2>
+      
+      <div class="inner">
+        <div class="clean-line"></div>
+
+        <!-- Games Section -->
+        <div id="games-section" class="main section active" style="margin: -75px;">
+          <p><a href="https://tylerpalko.github.io/gamehub/1/">1</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/2048/">2048</a></p>
+          <p><a href="https://hczhcz.github.io/Flappy-2048/">Flappy 2048</a></p>
+          <p><a href="https://hczhcz.github.io/Racing-2048/">Racing 2048</a></p>
+          <p><a href="https://hczhcz.github.io/Step-2048/">Step the 2048 tile</a></p>
+          <p><a href="https://hczhcz.github.io/2048/">8402</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/9007199254740992/index.html">9007199254740992</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/adanceoffireandice/">A Dance Of Fire And Ice</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/asteroids/">Asteroids</a></p>
+          <p><a href=https://tylerpalko.github.io/gamehub/bitlife/">Bit Life</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/basketrandom/">Basket Random</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/boxingrandom/">Boxing Random</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/volleyrandom/">Volley Random</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/crazycattle3d/index-2.html">CrazyCattle3D</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/doodlejump/">Doodle Jump</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/ducklife/">Duck Life</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/ducklife2/">Duck Life 2</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/ducklife3/">Duck Life 3</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/ducklife4/">Duck Life 4</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/fireboyandwatergirlintheforesttemple/">Fireboy and Watergirl</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/flappybird/">Flappy Bird</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/gopherkart/">Gopher Kart</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/hextris/">Hextris</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/ovo/">OvO</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/pacman/">Pac-Man</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/retrobowl/">Retro Bowl</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/riddleschool/">Riddle School</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/riddleschool2/">Riddle School 2</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/riddleschool3/">Riddle School 3</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/riddleschool4/">Riddle School 4</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/riddleschool5/">Riddle School 5</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/flash/riddle-transfer/index.html">Riddle Transfer</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/flash/riddle-transfer-2/index.html">Riddle Transfer 2</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/slope/index.html">Slope</a></p>
+          <p><a href="https://slopeonline.online/slope-game-2.embed">Slope 2</a></p>
+          <p><a href="https://googlesnakemods.com/v/current/">Snake</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/snowrider3d/">Snow Rider 3D</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/spaceinvaders/">Space Invaders</a></p>
+          <p><a href="https://gamecollections.me/game/owner/tetris/">Tetris</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/thereisnogame/">THERE IS NO GAME!</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/tunnelrush/">Tunnel Rush</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/worldshardestgame/">World's Hardest Game</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/worldshardestgame2/">World's Hardest Game 2</a></p>
+          <p><a href="https://unblockedgamesfree.github.io/worlds-hardest-game-3/">World's Hardest Game 3</a></p>
+          <p><a href="https://slowroads.io/">Slow Roads</a></p>
+          <p><a href="https://www.linerider.com/">Line Rider</a></p>
+          <p><a href="https://1v1.lol/">1v1.lol</a></p>
+          <p><a href="https://ubg44.github.io/Gladihoppers/">Gladihoppers</a></p>
+          <p><a href="https://www.schoolschoolschool.com/">Chess.com</a></p>
+          <p><a href="https://augustberchelmann.com/mario/">Super Mario 64</a></p>
+          <p><a href="https://html-classic.itch.zone/html/2876359-1383886/index.html">Friday Night Funkin'</a></p>
+          <p><a href="https://jcw87.github.io/c2-smb1/">Super Mario Bros.</a></p>
+          <p><a href="https://pyxld-kris.github.io/clash-royale-clone/">Clash Royale</a></p>
+          <p><a href="https://subtlexp.github.io/Subway-Surfers/">Subway Surfers</a></p>
+          <p><a href="https://block-blast-three.vercel.app/">Block Blast</a></p>
+          <p><a href="https://raz0red.github.io/webprboom/">DOOM</a></p>
+          <p><a href="https://notan127.github.io/GBA-Emulator-Online/">Gameboy Advance</a></p>
+          <p><a href="https://noclip.website/">Noclip.website</a></p>
+          <p><a href="https://1games.io/game/deltarune/">Deltarune</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/xx142b2.exe/">xx142-b2.exe</a></p>
+          <p><a href="https://sandtris.com/">Sandtris</a></p>
+          <p><a href="https://copy.sh/life/">Conway's Game Of Life</a></p>
+          <p><a href="https://phydemo.app/ray-optics/simulator/">Ray Optics Simulator</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/moto-x3m/index.html">Moto X3M</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/moto-x3m-2/index.html">Moto X3M 2</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/moto-x3m-winter/index.html">Moto X3M Winter</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/moto-x3m-pool-party/index.html">Moto X3M Pool Party</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/moto-x3m-spooky-land/index.html">Moto X3M Spooky Land</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/adventuredrivers/">Adventure Drivers</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/breaklock/">Break Lock</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/evilglitch/">Evil Glitch</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/konnekt/">Konnect</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/vex3/">Vex 3</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/vex4/">Vex 4</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/vex5/">Vex 5</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/vex6/">Vex 6</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/vex7/">Vex 7</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/thechromaincident/">The Chroma Incident</a></p>
+          <p><a href="https://tylerpalko.github.io/gamehub/underrun/">Under Run</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/minesweeper/index.html">Minesweeper</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/cell-machine/index.html">Cell Machine</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/drift-boss/index.html">Drift Boss</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/temple-run-2/index.html">Temple Run 2</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/solitaire/index.html">Solitare</a></p>
+          <p><a href="https://googlefeud.com/">Google Feud</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/SNES/super-mario-world/index.html">Super Mario World</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/SNES/super-mario-world-two/index.html">Super Mario World 2</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/SNES/super-mario-kart/index.html">Super Mario Kart</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/SNES/legend-of-zelda-link-to-the-past/index.html">The Legend Of Zelda: A Link To The Past</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/legend-of-zelda-minish-cap/index.html">The Legend Of Zelda: The Minish Cap</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/pokemon-fire-red/index.html">Pokemon Fire Red</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/pokemon-leaf-green/index.html">Pokemon Leaf Green</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/pokemon-ruby/index.html">Pokemon Ruby</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/pokemon-sapphire/index.html">Pokemon Sapphire</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/sonic-advance/index.html">Sonic Advance</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/sonic-advance-2/index.html">Sonic Advance 2</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/emulation/GBA/sonic-advance-3/index.html">Sonic Advance 3</a></p>
+          <p><a href="https://www.coolmathgames.com/0-run/play">Run </a></p>
+          <p><a href="https://www.coolmathgames.com/0-run-2/play">Run 2</a></p>
+          <p><a href="https://www.coolmathgames.com/0-run-3/play">Run 3</a></p>
+          <p><a href="https://eaglercraft.com/mc/indev/">Minecraft Indev</a></p>
+          <p><a href="https://eaglercraft.com/mc/a1.2.6">Minecraft Alpha 1.2.6</a></p>
+          <p><a href="https://eaglercraft.com/mc/b1.3">Minecraft Beta 1.3</a></p>
+          <p><a href="https://eaglercraft.com/mc/b1.7.3">Minecraft Beta 1.7.3</a></p>
+          <p><a href="https://eaglercraft.com/mc/1.5.2">Minecraft 1.5.2</a></p>
+          <p><a href="https://eaglercraft.com/mc/1.8.8">Minecraft 1.8.8</a></p>
+          <p><a href="https://eaglercraft.com/mc/1.12.2">Minecraft 1.12.2</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/among-us/index.html">Among Us</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/ages-of-conflict/index.html">Ages of Conflict</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/circlo/index.html">CircloO</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/death-run-3d/index.html">Death Run 3D</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/flash/bloons-td/index.html">Bloons TD</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/flash/bloons-td-2/index.html">Bloons TD 2</a></p>
+          <p><a href="https://musiclab.chromeexperiments.com/Song-Maker/">Song Maker</a></p>
+          <p><a href="https://scratch.mit.edu/">Scratch</a></p>
+          <p><a href="https://trilzo.com/">Trilzo's Button</a></p>
+          <p><a href="https://dinahmoelabs.com/tonecraft">TONECRAFT</a></p>
+          <p><a href="https://neal.fun/not-a-robot/">I'm Not A Robot</a></p>
+          <p><a href="https://neal.fun/infinite-craft/">Infinite Craft</a></p>
+          <p><a href="https://neal.fun/stimulation-clicker/">Stimulation Clicker</a></p>
+          <p><a href="https://neal.fun/password-game/">The Password Game</a></p>
+          <p><a href="https://neal.fun/perfect-circle/">Draw A Perfect Circle</a></p>
+          <p><a href="http://www.slightlyinteresting.com/plasmaglobe/plasma.asp">Plasma Globe</a></p>
+          <p><a href="https://strobe.cool/">Strobe Illusion</a></p>
+          <p><a href="https://whatsmystarbucksname.com/">Whats My Starbucks Name?</a></p>
+          <p><a href="http://typedrummer.com/">Typedrummer</a></p>
+          <p><a href="https://nb-ga.github.io/games-site/projects/core-ball/index.html">Core Ball</a></p>
+          <p><a href="https://play.cpjourney.net/">Club Penquin</a></p>
+          <p><a href="https://ug17.github.io/play/Stack/">Stack</a></p>
+          <p><a href="https://obamify.com/">Obamify</a></p>
+          <p><a href="https://stickmanhookonline.io/game/stickman-hook/">Stickman Hook</a></p>
+          <p><a href="https://azgames.io/game/tap-road/">Tap Road</a></p>
+          <p><a href="https://pongonpolygon.github.io/pages/deeradventure.html">Deer Adventure</a></p>
+          <p><a href="https://gamecollections.me/game/owner/level-devil/">Level Devil</a></p>
+          <p><a href="https://gamecollections.me/game/owner/level-devil-2/">Level Devil 2</a></p>
+          <p><a href="https://gamecollections.me/game/3kh0-assets-main/unfairmario/">Unfair Mario</a></p>
+          <p><a href="https://html-classic.itch.zone/html/300364/index.html?v=1542781840">We Become What We Behold</a></p>
+          <p><a href="https://isle.pizza/">Lego Island</a></p>
+        </div>
+
+        <!-- Movies Section -->
+        <div id="movies-section" class="main section" style="margin: -75px;">
+          <p><a href="https://drive.google.com/drive/mobile/folders/1d-tAfmr_Qomv86YWrOIcSXHrAoRlkiAo?usp=drive_link">Sonic Movie 1, 2, 3</a></p>
+          <p><a href="https://drive.google.com/drive/u/0/mobile/folders/1w3o_qE2iwsj6XbA42mpGDGLX0Atgnc9k">South Park</a></p>
+          <p><a href="https://archive.org/details/aqq_20240331">Lego Batman Movie</a></p>
+          <p><a href="https://archive.org/details/ghost-stories-ADV">Ghost Stories Dub</a></p>
+          <p><a href="https://archive.org/details/helluva-boss-every-episode">Helluva Boss</a></p>
+          <p><a href="https://drive.google.com/drive/u/0/mobile/folders/1vE_GRWxF85bcek0-eItTM2vL3jALS45b?usp=drive_link">Hazbin Hotel</a></p>
+          <p><a href="https://drive.google.com/file/d/1IMm_z9dhm9w4bAMcxnruE7ZR6Mbzo92u/view">KPop Demon Hunters</a></p>
+          <p><a href="https://drive.google.com/drive/u/0/mobile/folders/19U1uKlpqFTGiwo9TaW9IhxckGqXLz_Nt">Arcane S1</a></p>
+          <p><a href="https://drive.google.com/drive/folders/1-YlQgRPH5hlT4iGgI2fV2-ldapdYWJ9X">Arcane S2</a></p>
+          <p><a href="https://drive.google.com/drive/u/0/mobile/folders/1j171tdwEP5nW4adlykuUIkvnnxd-QZtS">Steven Universe</a></p>
+          <p><a href="https://archive.org/details/one-crazy-summer_202408">Gravity Falls</a></p>
+          <p><a href="https://drive.google.com/drive/folders/1KZpVmcEVIXXle989eFtujR2sxvyWWO8D">Demon Slayer</a></p>
+          <p><a href="https://drive.google.com/drive/folders/1ACH9a2bLreMOADbSxRy6lQPwuoj66p7t">Invader Zim</a></p>
+          <p><a href="https://archive.org/details/a-minecraft-movie_202510">A Minecraft Movie</a></p>
+          <p><a href="https://youtube.com/playlist?list=PLNmbST1519bIgP3l01bwQEy_ehvvX9DDG&si=nvEWWFqBHfc5ztmw">Sonic Boom</a></p>
+          <p><a href="https://drive.google.com/drive/u/0/folders/1-OOdzY2lANvqfYs_MNTLdBYHfuDGlroI">Ninjago</a></p>
+          <p><a href="https://www.youtube.com/watch?v=jzfgwxENvLk">Raisin In The Sun (1989)</a></p>
+          <p><a href="https://drive.google.com/drive/u/0/folders/1OFWN8hASAuNWSn9mK2gANJ0PSQhvIA2r">Avatar: The Last Airbender</a></p>
+          <p><a href="https://archive.org/details/totoro-fox-dub">My Neighbor Totoro</a></p>
+          <p><a href="https://drive.google.com/file/d/11LHhwRkNzx82Bz5PCZOz4V1hSlszLZRb/view">Wicked</a></p>
+          <p><a href="https://archive.org/details/fantastic.-mr.-fox.-2009.720p.-br-rip.x-264.-yify">Fantastic Mr. Fox</a></p>
+          <p><a href="https://archive.org/details/mr-peabody-and-sherman_202208/MR_PEABODY_AND_SHERMAN.ISO">Mr. Peabody and Sherman</a></p>
+          <p><a href="https://archive.org/details/203fe130cf63eb5dc7a2adc12ec398bc6171d1c055d0cf64711bd5f9a9675bc5d81201d0f1641e00">Matilda</a></p>
+          <p><a href="https://archive.org/details/spider-man-across-the-spider-verse-2023-2160p-webrip-x-265-10bit-5.1-yts.-mx_202309">Spider-Man Across The Spider-Verse</a></p>
+          <p><a href="https://archive.org/details/hamilton-the-musical-live/Hamilton++Act+1.mp4">Hamilton</a></p>
+          <p><a href="https://archive.org/details/isle-of-dogs_202205">Isle Of Dogs</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Avengers%20-%20Infinity%20War.mp4">Avengers Infinity War</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Back%20to%20the%20Future.mp4">Back to the Future</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Beetlejuice.mp4">Beatlejuice</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Captain%20Underpants%20The%20First%20Epic%20Movie.mp4">Captian Underpants</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cars.mp4">Cars</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cars%202.mp4">Cars 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cars%203.mp4">Cars 3</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Casper.mp4">Casper</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Charlie%20and%20the%20Chocolate%20Factory.mp4">Charlie and the Chocolate Factory</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/A%20Bugs%20Life.mp4">A Bugs Life</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/A%20Goofy%20Movie.mp4">A Goofy Movie</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Alvin%20And%20The%20Chipmunks%20-%20The%20Road%20Chip.mp4">Alvain and the Chipmunks: The Road Chip</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Alvin%20And%20The%20Chipmunks.mp4">Alvain and the Chipmunks</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Alvin%20and%20the%20Chipmunks%20-%20Chip%20Wrecked.mp4">Alvain and the Chipmunks: Chip Wrecked</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Angry%20Birds.mp4">Angry Birds</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ant-Man%20and%20the%20Wasp.mp4">Ant-Man and the Wasp</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ant-Man.mp4">Ant-Man</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Assassin%27s%20Creed.mp4">Assasin's Creed</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Avengers%20-%20Endgame.mp4">Avengers Endgame</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Avengers%20-%20Age%20of%20Ultron.mp4">Avengers: Age of Ultron</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cinderella.mp4">Cinderella</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cloudy%20With%20A%20Chance%20Of%20Meatballs.mp4">Cloudy with a Chance of Meatballs</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Cloudy%20with%20a%20Chance%20of%20Meatballs%202.mp4">Cloudy with a Chance of Meatballs 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Coraline.mp4">Coraline</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Deadpool.mp4">Deadpool</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Deadpool%202.mp4">Deadpool 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Despicable%20Me.mp4">Despicable Me</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Despicable%20Me%202.mp4">Despicable Me 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Despicable%20Me%203.mp4">Despicable Me 3</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Die%20Hard.mp4">Die Hard</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Die%20Hard%202.mp4">Die Hard 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Die%20Hard%203.mp4">Die Hard 3</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Elf.mp4">Elf</a></p>
+          <p><a href="https://ia601508.us.archive.org/35/items/movies_202211/Escape%20From%20The%20Planet%20of%20the%20Apes.mp4">Escape from The Planet of the Apes</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%201.mp4">Final Destination</a></p>
+          <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Final%20Destination%202.mp4">Final Destination 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%203.mp4">Final Destination 3</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%204%20-%20The%20Final%20Destination.mp4">Final Destination 4</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Final%20Destination%205.mp4">Final Destination 5</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Flubber.mp4">Flubber</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Forrest%20Gump.mp4">Forest Gump</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Garfield.mp4">Garfield</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Hercules%20%281997%29.mp4">Hercules</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Holes.mp4">Holes</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Home%20Alone.mp4">Home Alone</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Home%20Alone%202%20-%20Lost%20in%20New%20York.mp4">Home Alone 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Home%20Alone%203.mp4">Home Alone 3</a></p>
+          <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/How%20To%20Train%20Your%20Dragon.mp4">How to Train your Dragon</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/How%20to%20Train%20Your%20Dragon%202.mp4">How to Train your Dragon 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/How%20the%20Grinch%20Stole%20Christmas.mp4">How The Grinch Stole Christmas</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age.mp4">Ice Age</a></p>
+          <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Ice%20Age%20-%20The%20Meltdown.mp4">Ice Age: The Meltdown</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20Dawn%20of%20The%20Dinosaurs.mp4">Ice Age: Dawn of The Dinosaurs</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20Continental%20Drift.mp4">Ice Age: Continental Drift</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20Collision%20Course.mp4">Ice Age: Collision Course</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Ice%20Age%20-%20A%20Mammoth%20Christmas.mp4">Ice Age: A Mammoth Christmas</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/It.mp4">It</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Independence%20Day.mp4">Independence Day</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Independence%20Day%20-%20Resurgence.mp4">Independence Day: Resurgence</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Temple%20of%20Doom.mp4">Indiana Jones and the Temple of Doom</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Raiders%20of%20The%20Lost%20Ark.mp4">Indianda Jone and the Lost Arc</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Last%20Crusade.mp4">Indiana Jones and the Last Crusade</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Indiana%20Jones%20and%20the%20Kingdom%20of%20the%20Crystal%20Skull.mp4">Indiana Jones and the Kindom of the Crystal Skull</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Iron%20Man.mp4">Iron Man</a></p>
+          <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Iron%20Man%202.mp4">Iron Man 2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Iron%20Man%203.mp4">Iron Man 3</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Deathly%20Hallows%20Part%201.mp4">Harry Potter and the Deathly Hallows Pt.1</a></p>
+          <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Harry%20Potter%20And%20The%20Deathly%20Hallows%20Part%202.mp4">Harry Potter and the Deathly Hallows Pt.2</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Chamber%20of%20Secrets.mp4">Harry Potter and the Chamber Of Secrets</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.mp4">Harry Potter and the Goblet of Fire</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Half%20Blood%20Prince.mp4">Harry Potter and the Half Blood Prince</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Order%20of%20the%20Phoenix.mp4">Harry Potter and the Order of the Phoenix</a></p>
+          <p><a href="https://dn720004.ca.archive.org/0/items/movies_202211/Harry%20Potter%20and%20the%20Philosopher%27s%20Stone.mp4">Harry Potter and the Philosopher's Stone</a></p>
+          <p><a href="https://ia801508.us.archive.org/35/items/movies_202211/Harry%20Potter%20and%20the%20Prisoner%20of%20Azkaban.mp4">Harry Potter and the Prisoner of Azkaban</a></p>
+          <p><a href="https://dn720206.ca.archive.org/0/items/the.-martian.-2015.-extended.-1080p.-brrip.x-264.-aac-etrg/The.Martian.2015.EXTENDED.1080p.BRRip.x264.AAC-ETRG.mp4">The Martian</a></p>
+          <p><a href="https://bingewatch.to/series/watch-wednesday-hd-90553">Wednesday</a></p>
+          <p><a href="https://bingewatch.to/watch-series/watch-the-amazing-world-of-gumball-hd-39036/93462">The Amazing World Of Gumball</a></p>
+          <p><a href="https://bingewatch.to/watch-series/watch-the-wonderfully-weird-world-of-gumball-hd-128905/1573558">The Wonderfully Weird World Of Gumball</a></p>
+          <p><a href="https://ia600309.us.archive.org/10/items/paranorman_202506/ParaNorman.ia.mp4">Paranorman</a></p>
+        </div>
+
+        <div class="clean-line" style="margin: 30px;"></div>
+      </div>
+
+      <div class="mintext">
+        <p><a href="../">Home page</a></p>
+      </div>
+    </div>
+
+    <script>
+      // Function to toggle between Games and Movies sections
+      function toggleSection(section) {
+        // Hide both sections first
+        document.getElementById("games-section").classList.remove("active");
+        document.getElementById("movies-section").classList.remove("active");
+        
+        // Remove the active button styling
+        document.getElementById("gamesButton").classList.remove("active-button");
+        document.getElementById("moviesButton").classList.remove("active-button");
+        
+        // Show the selected section and add the active button styling
+        if (section === 'games') {
+          document.getElementById("games-section").classList.add("active");
+          document.getElementById("gamesButton").classList.add("active-button");
+          document.title = "GlitchHub - Games";
+        } else if (section === 'movies') {
+          document.getElementById("movies-section").classList.add("active");
+          document.getElementById("moviesButton").classList.add("active-button");
+          document.title = "GlitchHub - Movies";
+        }
+      }
+
+      // Initialize with the Games section visible
+      window.onload = function() {
+        toggleSection('games');
+      };
+      
+      // links
+      document.querySelectorAll("a").forEach(link => {
+        // Skip links that already contain an image (like your favicon or GitHub icon)
+        if (link.querySelector("img")) return;
+
+        // Get domain name from link
+        let domain;
+        try {
+          domain = new URL(link.href).origin;
+        } catch {
+          return; // skip if invalid URL
+        }
+
+        // Create favicon image
+        const icon = document.createElement("img");
+        icon.src = `https://www.google.com/s2/favicons?sz=32&domain_url=${domain}`;
+        icon.alt = "favicon";
+        icon.style.width = "1em";
+        icon.style.height = "1em";
+        icon.style.verticalAlign = "top";
+        icon.style.marginTop = "-2px";
+        icon.style.marginRight = "10px";
+        icon.style.borderRadius = "25%";
+
+        // Insert favicon before the link text
+        link.prepend(icon);
+      });
+
+      
+      //icon 
+      (function() {
+        const darkIcon = "../assets/GlitchHub.ico";      // dark mode icon
+        const lightIcon = "../assets/GlitchHubLM.ico";   // light mode icon
+    
+        function updateFavicon() {
+          const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const iconPath = isDark ? darkIcon : lightIcon;
+    
+          // Remove any existing favicons
+          document.querySelectorAll("link[rel~='icon']").forEach(link => link.remove());
+    
+          // Create new favicon
+          const newIcon = document.createElement("link");
+          newIcon.rel = "icon";
+          newIcon.href = iconPath;
+          document.head.appendChild(newIcon);
+        }
+    
+        // Run once at start
+        updateFavicon();
+    
+        // Watch for system theme changes
+        window.matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", updateFavicon);
+      })();
+    </script>
+  </body>
+</html>
