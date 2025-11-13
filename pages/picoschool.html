@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicoSchool SWF Emulator</title>
+    <style>
+        /* Make the body and html take up the full screen */
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        /* Make the ruffle container fullscreen */
+        #ruffle-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- This will be the container for the Ruffle SWF emulator -->
+    <div id="ruffle-container"></div>
+
+    <!-- Load Ruffle -->
+    <script src="https://unpkg.com/ruffle-web@latest/ruffle.js"></script>
+
+    <script>
+        // Check if the Ruffle library is loaded
+        if (window.RufflePlayer) {
+            console.log('Ruffle is loaded');
+        } else {
+            console.error('Ruffle is not loaded');
+        }
+
+        // Initialize Ruffle Player
+        const ruffle = window.RufflePlayer.newest();
+        const container = document.getElementById('ruffle-container');
+        const player = ruffle.createPlayer();
+
+        // Attach the player to the container
+        container.appendChild(player);
+
+        // Load the SWF file (you can replace the URL if needed)
+        player.load('../assets/picoschool.swf');
+
+        // Add an event listener to catch loading errors
+        player.addEventListener('error', (e) => {
+            console.error('Error loading SWF:', e);
+        });
+
+        // Make sure it takes the full screen
+        window.addEventListener('resize', () => {
+            player.style.width = `${window.innerWidth}px`;
+            player.style.height = `${window.innerHeight}px`;
+        });
+
+        // Initial fullscreen size
+        player.style.width = `${window.innerWidth}px`;
+        player.style.height = `${window.innerHeight}px`;
+    </script>
+</body>
+</html>
