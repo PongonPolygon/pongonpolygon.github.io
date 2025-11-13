@@ -26,40 +26,25 @@
 
     <!-- Load Ruffle -->
     <script src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@latest/ruffle.js"></script>
-
     <script>
-        // Check if the Ruffle library is loaded
-        if (window.RufflePlayer) {
-            console.log('Ruffle is loaded');
-        } else {
-            console.error('Ruffle is not loaded');
-        }
-
-        // Initialize Ruffle Player
+    document.addEventListener("DOMContentLoaded", () => {
+        window.RufflePlayer.config = {
+            autoplay: "on",
+            unmuteOverlay: "hidden"
+        };
+    
         const ruffle = window.RufflePlayer.newest();
-        const container = document.getElementById('ruffle-container');
+        const container = document.getElementById("ruffle-container");
         const player = ruffle.createPlayer();
-
-        // Attach the player to the container
         container.appendChild(player);
-
-        // Load the SWF file (you can replace the URL if needed)
-        player.load('../assets/picoschool.swf');
-
-        // Add an event listener to catch loading errors
-        player.addEventListener('error', (e) => {
-            console.error('Error loading SWF:', e);
+    
+        player.load("../assets/picoschool.swf").then(() => {
+            player.play(); // ensure it starts if autoplay allowed
         });
-
-        // Make sure it takes the full screen
-        window.addEventListener('resize', () => {
-            player.style.width = `${window.innerWidth}px`;
-            player.style.height = `${window.innerHeight}px`;
-        });
-
-        // Initial fullscreen size
-        player.style.width = `${window.innerWidth}px`;
-        player.style.height = `${window.innerHeight}px`;
+    
+        player.style.width = "100%";
+        player.style.height = "100%";
+    });
     </script>
 </body>
 </html>
