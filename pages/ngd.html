@@ -1,0 +1,64 @@
+<!-- ngd stands for newgrounds downloader btw -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Newgrounds Flash Game Embed Extractor</title>
+<script>
+async function extract() {
+    try {
+        const text = await navigator.clipboard.readText();
+        if (!text.includes("ruffleembed")) {
+            alert("Clipboard doesn't contain a Ruffle embed link.");
+            return;
+        }
+
+        const url = new URL(text);
+        const props = url.searchParams.get("props");
+        if (!props) {
+            alert("No props parameter found.");
+            return;
+        }
+
+        const decoded = JSON.parse(decodeURIComponent(props));
+        const swf = decoded.swf;
+
+        if (!swf) {
+            alert("No SWF URL found.");
+            return;
+        }
+
+        // redirect to download
+        location.href = swf;
+
+        // attempt to close afterwards
+        setTimeout(() => window.close(), 500);
+
+    } catch (err) {
+        alert("Error: " + err);
+    }
+}
+</script>
+<style>
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      font-family: sans-serif;
+      cursor: pointer;
+      user-select: none;
+      background-color: black;
+      color: white;
+  }
+</style>
+</head>
+<body onclick="extract()">
+    <div>
+    <h2>Click anywhere to extract the Newgrounds embed file</h2><br>
+    <p>Open up the Newgrounds link and find the Flash game iframe. Then copy the link it uses, and start. It will automatically be downloaded.</p>
+    </div>
+</body>
+</html>
