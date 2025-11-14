@@ -23,24 +23,21 @@
           background-color: #000014;
           color: #ffffff;
           font-family: 'Press Start 2P';
-          margin: 0; /* remove default page margin so fixed header/footer align flush */
+          margin: 0;
         }
-
-        /* Header */
         .heading {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
-          height: 60px; /* adjust as needed */
+          height: 60px;
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #000014; /* solid background */
-          z-index: 1000; /* ensure header sits above page content */
+          background-color: #000014;
+          z-index: 1000;
           box-shadow: 0 2px 4px rgba(0,0,0,0);
         }
-
         a:link {
           color: #66c0ff;
           background-color: transparent;
@@ -57,11 +54,11 @@
         }
         .main, .body {
           text-align: center;
-          padding-top: 60px;   /* equal to .heading height */
-          padding-bottom: 50px; /* equal to .footer height */
-          overflow-x: hidden; /* ✅ prevents horizontal scrolling */
-          word-wrap: break-word; /* ✅ wraps long URLs/text */
-          overflow-wrap: anywhere; /* ✅ modern alternative for long URLs */
+          padding-top: 60px;
+          padding-bottom: 50px;
+          overflow-x: hidden;
+          word-wrap: break-word;
+          overflow-wrap: anywhere;
         }
         .mintext {
           text-align: center;
@@ -75,32 +72,23 @@
           margin: 25px auto;
           background: linear-gradient(90deg, transparent, #888, transparent);
         }
-
-        /* Hidden Sections */
         .section {
           display: none;
         }
-
-        /* Active Section */
         .active {
           display: block;
         }
-
-        /* Styling for the active section button */
         .active-button {
           background-color: #404070;
           cursor: pointer;
-        }
-        
+        }       
         .button:hover {
           cursor: pointer;
         }
-      
         .inner {
           margin-top: top;
           padding: 0;
         }
-
     </style>
   </head>
   
@@ -270,8 +258,8 @@
             <a href="https://nzp.gay/">Nazi Zombies</a><br>
             <a href="https://pongonpolygon.github.io/games/picoschool.html">Pico's School</a><br>
             <a href="https://pongonpolygon.github.io/games/neneinteractivesuicide.html">Nene Interactive Suicide</a><br>
+            <a href="https://script.google.com/macros/s/AKfycbzxpyljaqvmqRShvfh_XpN8ZRRpLRCeYHZ0V-9ZoC4wf0pFHWFfgQQM-o1o-Q7pc3qAwg/exec">Rocket League 2D</a><br>
           </p>
-          
             
           <div class="clean-line" style="margin-bottom: 30px;"></div>
             
@@ -421,17 +409,11 @@
     </div>
 
     <script>
-      // Function to toggle between Games and Movies sections
       function toggleSection(section) {
-        // Hide both sections first
         document.getElementById("games-section").classList.remove("active");
         document.getElementById("movies-section").classList.remove("active");
-        
-        // Remove the active button styling
         document.getElementById("gamesButton").classList.remove("active-button");
         document.getElementById("moviesButton").classList.remove("active-button");
-        
-        // Show the selected section and add the active button styling
         if (section === 'games') {
           document.getElementById("games-section").classList.add("active");
           document.getElementById("gamesButton").classList.add("active-button");
@@ -442,26 +424,19 @@
           document.title = "GlitchHub - Movies";
         }
       }
-
-      // Initialize with the Games section visible
+    </script>
+    <script>
       window.onload = function() {
         toggleSection('games');
       };
-      
-      // links
       document.querySelectorAll("a").forEach(link => {
-        // Skip links that already contain an image (like your favicon or GitHub icon)
         if (link.querySelector("img")) return;
-
-        // Get domain name from link
         let domain;
         try {
           domain = new URL(link.href).origin;
         } catch {
-          return; // skip if invalid URL
+          return;
         }
-
-        // Create favicon image
         const icon = document.createElement("img");
         icon.src = `https://www.google.com/s2/favicons?sz=32&domain_url=${domain}`;
         icon.alt = "favicon";
@@ -471,35 +446,23 @@
         icon.style.marginTop = "-.4em";
         icon.style.marginRight = "6px";
         icon.style.borderRadius = "25%";
-
-        // Insert favicon before the link text
         link.prepend(icon);
       });
-
-      
-      //icon 
+    </script>
+    <script>
       (function() {
-        const darkIcon = "../assets/GlitchHub.ico";      // dark mode icon
-        const lightIcon = "../assets/GlitchHubLM.ico";   // light mode icon
-    
+        const darkIcon = "../assets/GlitchHub.ico";
+        const lightIcon = "../assets/GlitchHubLM.ico";
         function updateFavicon() {
           const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
           const iconPath = isDark ? darkIcon : lightIcon;
-    
-          // Remove any existing favicons
           document.querySelectorAll("link[rel~='icon']").forEach(link => link.remove());
-    
-          // Create new favicon
           const newIcon = document.createElement("link");
           newIcon.rel = "icon";
           newIcon.href = iconPath;
           document.head.appendChild(newIcon);
         }
-    
-        // Run once at start
         updateFavicon();
-    
-        // Watch for system theme changes
         window.matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", updateFavicon);
       })();
