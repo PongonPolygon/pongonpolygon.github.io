@@ -33,7 +33,17 @@
           align-items: center;
           justify-content: center;
           background-image: linear-gradient(to bottom, #000014 50%, rgba(0,0,0,0) 100%);
+          z-index: 999;
+        }
+      .noscript {
+          position: fixed;
+          align-items:center;
+          justify-content: center;
           z-index: 1000;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          background-color: black;
         }
         a:link {
           color: #66c0ff;
@@ -90,7 +100,11 @@
   </head>
   
   <body>
-    <noscript>Sorry, but you either don't have Javascript support, or it's not on! Please turn on Javascript to use this page!</noscript>
+    <noscript>
+      <div class="noscript">
+                  Sorry, but you either don't have Javascript support, or it's not on! Please turn on Javascript to use this page
+      </div>
+    </noscript>
     <div class="heading">
       <h1><span style="color: #ffffff;">Glitch</span><span style="color: #00ff9c;">Hub</span></h1>
     </div>
@@ -259,6 +273,7 @@
             <a href="https://pongonpolygon.github.io/games/neneinteractivesuicide.html">Nene Interactive Suicide</a><br>
             <a href="https://script.google.com/macros/s/AKfycbzxpyljaqvmqRShvfh_XpN8ZRRpLRCeYHZ0V-9ZoC4wf0pFHWFfgQQM-o1o-Q7pc3qAwg/exec">Rocket League 2D</a><br>
             <a href="https://www.royaledle.com/">Royaledle</a><br>
+            <a href="https://holeio.com/">Hole.io</a><br>
           </p>
             
           <div class="clean-line" style="margin-bottom: 30px;"></div>
@@ -424,7 +439,7 @@
           document.title = "GlitchHub - Movies";
         }
       }
-    </script>
+    </scrip>
     <script>
       window.onload = function() {
         toggleSection('games');
