@@ -95,13 +95,13 @@
           cursor: pointer;
         }
         .inner {
-          margin-top: top;
+          margin-top: 0px;
           padding: 0;
         }
     </style>
   </head>
   
-  <body style="background-image: url('https://raw.githubusercontent.com/PongonPolygon/pongonpolygon.github.io/refs/heads/main/assets/GHBGIMG.png'); background-size: 50%;">
+  <body id="bg" style="background-image: url('https://raw.githubusercontent.com/PongonPolygon/pongonpolygon.github.io/refs/heads/main/assets/GHBGIMG.png'); background-size: 50%;">
     <noscript>
       <div class="noscript">
         Sorry, but you either don't have JavaScript support, or it's not on!<br>Please turn on JavaScript to use this page.
@@ -423,6 +423,12 @@
         window.matchMedia("(prefers-color-scheme: dark)")
           .addEventListener("change", updateFavicon);
       })();
+    </script>
+    <script>
+    window.addEventListener("scroll", function () {
+        const y = window.scrollY * 0.5; // 50% of scroll position
+        document.getElementById("bg").style.backgroundPositionY = y + "px";
+    });
     </script>
   </body>
 </html>
