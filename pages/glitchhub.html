@@ -24,16 +24,16 @@
           margin: 0;
         }
         .heading {
-          position: fixed;
-          top: 0;
-          left: 0;
+          position: relative;
+          top: 0px;
+          left: 0px;
           width: 100%;
-          height: 60px;
+          height: 125px;
           display: flex;
           align-items: center;
           justify-content: center;
-          background-image: linear-gradient(to bottom, #000014 50%, rgba(0,0,0,0) 100%);
-          z-index: 999;
+          z-index: 99;
+          font-size: 30px;
         }
       .noscript {
           font-family: "Sans-serif";
@@ -62,12 +62,14 @@
           background-color: transparent;
         }
         .main, .body {
+          z-index: 999;
           text-align: center;
           padding-top: 60px;
           padding-bottom: 50px;
           overflow-x: hidden;
           word-wrap: break-word;
           overflow-wrap: anywhere;
+          margin-top: -80px;
         }
         .mintext {
           text-align: center;
@@ -109,7 +111,7 @@
     </noscript>
     
     <div class="heading">
-      <h1><span style="color: #ffffff;">Glitch</span><span style="color: #00ff9c;">Hub</span></h1>
+      <h1 id="title" style="position: relative; top: 0px;"><span style="color: #ffffff;">Glitch</span><span style="color: #00ff9c;">Hub</span></h1>
     </div>
     
     <div class="body">
@@ -429,10 +431,44 @@
       })();
     </script>
     <script>
-    window.addEventListener("scroll", function () {
-        const y = window.scrollY * 0.5; // 50% of scroll position
-        document.getElementById("bg").style.backgroundPositionY = y + "px";
-    });
-    </script>
+    let scrollPosition = 0;
+    let isTicking = false;
+
+    // The function that handles the animation updates
+    function updateAnimation() {
+        // Apply the parallax effect
+        // Note: Using 'scrollPosition' instead of 'window.scrollY'
+        document.getElementById("bg").style.backgroundPositionY = scrollPosition * 0.5 + "px";
+        document.getElementById("title").style.top = scrollPosition * 0.25 + "px";
+
+        // Reset the ticking flag
+        isTicking = false;
+    }
+
+    // The function that is called on the scroll event
+    function handleScroll() {
+        // Update the current scroll position
+        scrollPosition = window.scrollY;
+
+        // Request a frame only if one is not already scheduled
+        if (!isTicking) {
+            window.requestAnimationFrame(updateAnimation);
+            isTicking = true;
+        }
+    }
+
+    // Attach the scroll event listener to update the scrollPosition and request a frame
+    window.addEventListener("scroll", handleScroll);
+</script>
   </body>
 </html>
+
+<!--
+  <script>
+    window.addEventListener("scroll", function () {
+      document.getElementById("bg").style.backgroundPositionY = window.scrollY * 0.5 + "px";
+      document.getElementById("title").style.top = window.scrollY * 0.5 + "px";
+    });
+   </script>
+old script
+-->
