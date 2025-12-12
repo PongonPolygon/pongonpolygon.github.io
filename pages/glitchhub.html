@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <!--hey i know this website is cool but...-->
-  <!--why are you opening Dev Tools????-->
-  <!--Ik you might want the source code or something, so...-->
-  <!--here it is:-->
-  <!--https://github.com/PongonPolygon/pongonpolygon.github.io/edit/main/pages/glitchhub.html-->
-  <!--there... you happy?-->
+  <!-- why are we DevTools'ing |: -->
   <head>
     <title>GlitchHub | Games</title>
     <style>
@@ -115,14 +110,14 @@
     </div>
     
     <div class="body">
-      <h2>
+      <h2 id="button-body" style="display: none;">
         <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>
         <span id="moviesButton" class="button" onclick="toggleSection('movies')">Movies</span>
         <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Recommend</span>
       </h2>
       
       <div class="inner">
-        <div class="clean-line"></div>
+        <div class="clean-line" id="linestart" style="display: none;"></div>
 
         <!-- Games Section -->
         <div id="games-section" class="main section" style="margin-top: -75px;">
@@ -375,7 +370,7 @@
         </div>
     
         <div id="loading-section" class="main section active" style="margin-top: -75px;">
-          <h2 style="color: #777777;">Loading...</h2>
+          <h2 style="color: #777777;">Loading Glitches...</h2>
         </div>
       </div>
     </div>
@@ -405,6 +400,8 @@
       }
       window.onload = function() {
         toggleSection('games');
+        document.getElementById("button-body").style.display = "block";
+        document.getElementById("linestart").style.display = "block";
       };
     </script>
     <script>
