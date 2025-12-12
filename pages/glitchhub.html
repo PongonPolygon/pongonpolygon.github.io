@@ -118,13 +118,14 @@
       <h2>
         <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>&nbsp;
         <span id="moviesButton" class="button" onclick="toggleSection('movies')">Movies</span>
+        <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Recommend</span>
       </h2>
       
       <div class="inner">
         <div class="clean-line"></div>
 
         <!-- Games Section -->
-        <div id="games-section" class="main section active" style="margin-top: -75px;">
+        <div id="games-section" class="main section" style="margin-top: -75px;">
           <p style="line-height: 1.5;">
             <a href="https://tylerpalko.github.io/gamehub/1/">1</a><br>
             <a href="https://tylerpalko.github.io/gamehub/2048/">2048</a><br>
@@ -368,6 +369,10 @@
             <p><a href="../">Home page</a></p>
           </div>
         </div>
+    
+        <div id="recommend-section" class="main section" style="margin-top: -75px;">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2bkjyClt60SSBiMTeRH3ydn_qzQ-w7plRLmrUaW_VaA-Dyg/viewform?embedded=true" width="640" height="875" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
       </div>
     </div>
 
@@ -375,8 +380,10 @@
       function toggleSection(section) {
         document.getElementById("games-section").classList.remove("active");
         document.getElementById("movies-section").classList.remove("active");
+        document.getElementById("recommend-section").classList.remove("active");
         document.getElementById("gamesButton").classList.remove("active-button");
         document.getElementById("moviesButton").classList.remove("active-button");
+        document.getElementById("recommendButton").classList.remove("active-button");
         if (section === 'games') {
           document.getElementById("games-section").classList.add("active");
           document.getElementById("gamesButton").classList.add("active-button");
@@ -385,13 +392,17 @@
           document.getElementById("movies-section").classList.add("active");
           document.getElementById("moviesButton").classList.add("active-button");
           document.title = "GlitchHub | Movies";
+        } else if (section === 'recommend') {
+          document.getElementById("recommend-section").classList.add("active");
+          document.getElementById("recommendButton").classList.add("active-button");
+          document.title = "GlitchHub | Recommend";
         }
       }
-    </script>
-    <script>
       window.onload = function() {
         toggleSection('games');
       };
+    </script>
+    <script>
       document.querySelectorAll("a").forEach(link => {
         if (link.querySelector("img")) return;
         let domain;
