@@ -116,7 +116,7 @@
     
     <div class="body">
       <h2>
-        <span id="gamesButton" class="button active-button" onclick="toggleSection('games')">Games</span>&nbsp;
+        <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>
         <span id="moviesButton" class="button" onclick="toggleSection('movies')">Movies</span>
         <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Recommend</span>
       </h2>
@@ -125,7 +125,7 @@
         <div class="clean-line"></div>
 
         <!-- Games Section -->
-        <div id="games-section" class="main section active" style="margin-top: -75px;">
+        <div id="games-section" class="main section" style="margin-top: -75px;">
           <p style="line-height: 1.5;">
             <a href="https://tylerpalko.github.io/gamehub/1/">1</a><br>
             <a href="https://tylerpalko.github.io/gamehub/2048/">2048</a><br>
@@ -373,11 +373,16 @@
         <div id="recommend-section" class="main section" style="margin-top: -75px;">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2bkjyClt60SSBiMTeRH3ydn_qzQ-w7plRLmrUaW_VaA-Dyg/viewform?embedded=true" width="640" height="875" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
+    
+        <div id="loading-section" class="main section active" style="margin-top: -75px;">
+          <h2 style="color: #777777;">Loading...</h2>
+        </div>
       </div>
     </div>
 
     <script>
       function toggleSection(section) {
+        document.getElementById("loading-section").classList.remove("active");
         document.getElementById("games-section").classList.remove("active");
         document.getElementById("movies-section").classList.remove("active");
         document.getElementById("recommend-section").classList.remove("active");
