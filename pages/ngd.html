@@ -28,11 +28,7 @@ async function extract() {
             alert("No SWF URL found.");
             return;
         }
-
-        // redirect to download
         location.href = swf;
-
-        // attempt to close afterwards
         setTimeout(() => window.close(), 500);
 
     } catch (err) {
