@@ -112,7 +112,7 @@
     <div class="body">
       <h2 id="button-body" style="display: none;">
         <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>
-        <span id="moviesButton" class="button" onclick="toggleSection('movies')">Movies</span>
+        <span id="videosButton" class="button" onclick="toggleSection('videos')">Videos</span>
         <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Recommend</span>
       </h2>
       
@@ -296,7 +296,7 @@
         </div>
 
         <!-- Movies Section -->
-        <div id="movies-section" class="main section" style="margin-top: -75px;">
+        <div id="videos-section" class="main section" style="margin-top: -75px;">
           <p style="line-height: 1.5;">
             <a href="https://drive.google.com/drive/mobile/folders/1d-tAfmr_Qomv86YWrOIcSXHrAoRlkiAo?usp=drive_link">Sonic Movie 1, 2, 3</a><br>
             <a href="https://drive.google.com/drive/u/0/mobile/folders/1w3o_qE2iwsj6XbA42mpGDGLX0Atgnc9k">South Park</a><br>
@@ -369,19 +369,19 @@
       function toggleSection(section) {
         document.getElementById("loading-section").classList.remove("active");
         document.getElementById("games-section").classList.remove("active");
-        document.getElementById("movies-section").classList.remove("active");
+        document.getElementById("videos-section").classList.remove("active");
         document.getElementById("recommend-section").classList.remove("active");
         document.getElementById("gamesButton").classList.remove("active-button");
-        document.getElementById("moviesButton").classList.remove("active-button");
+        document.getElementById("videosButton").classList.remove("active-button");
         document.getElementById("recommendButton").classList.remove("active-button");
         if (section === 'games') {
           document.getElementById("games-section").classList.add("active");
           document.getElementById("gamesButton").classList.add("active-button");
           document.title = "GlitchHub | Games";
-        } else if (section === 'movies') {
-          document.getElementById("movies-section").classList.add("active");
-          document.getElementById("moviesButton").classList.add("active-button");
-          document.title = "GlitchHub | Movies";
+        } else if (section === 'videos') {
+          document.getElementById("videos-section").classList.add("active");
+          document.getElementById("videosButton").classList.add("active-button");
+          document.title = "GlitchHub | Videos";
         } else if (section === 'recommend') {
           document.getElementById("recommend-section").classList.add("active");
           document.getElementById("recommendButton").classList.add("active-button");
