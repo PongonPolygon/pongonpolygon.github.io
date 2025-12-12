@@ -291,12 +291,8 @@
             <a href="https://voxiom.io/">Voxiom.io</a><br>
             <a href="https://venge.io/">Venge.io</a><br>
           </p>
-            
-          <div class="clean-line" style="margin-bottom: 30px;"></div>
-            
-          <div class="mintext">
-            <p><a href="../">Home page</a></p>
-          </div>
+      
+          <span class="mintext">(thats all!)</span>
         </div>
 
         <!-- Movies Section -->
@@ -355,14 +351,8 @@
             <a href="https://bingewatch.to/watch-series/watch-dragon-ball-hd-39541">Dragon Ball</a><br>
             <a href="https://bingewatch.to/watch-series/watch-dragon-ball-z-hd-39524">Dragon Ball Z</a><br>
             <span class="mintext">↑ Watch with an Adblocker ↑</span><br> <!-- PLS USE ADBLOCK OR U GET HACKED -->
-            <span class="mintext" style="font-size: 10px;">Tons of movies got removed because of blocked access. Sorry!</span><br>
           </p>
-            
-          <div class="clean-line" style="margin-bottom: 30px;"></div>
-
-          <div class="mintext">
-            <p><a href="../">Home page</a></p>
-          </div>
+          <span class="mintext">(thats all!)</span>
         </div>
     
         <div id="recommend-section" class="main section" style="margin-top: -75px;">
@@ -398,11 +388,11 @@
           document.title = "GlitchHub | Recommend";
         }
       }
-      window.onload = function() {
+      document.addEventListener('DOMContentLoaded', function() {
         toggleSection('games');
         document.getElementById("button-body").style.display = "block";
         document.getElementById("linestart").style.display = "block";
-      };
+      });
     </script>
     <script>
       document.querySelectorAll("a").forEach(link => {
@@ -447,41 +437,21 @@
     let scrollPosition = 0;
     let isTicking = false;
 
-    // The function that handles the animation updates
     function updateAnimation() {
-        // Apply the parallax effect
-        // Note: Using 'scrollPosition' instead of 'window.scrollY'
         document.getElementById("bg").style.backgroundPositionY = scrollPosition * 0.5 + "px";
         document.getElementById("title").style.top = scrollPosition * 0.25 + "px";
 
-        // Reset the ticking flag
         isTicking = false;
     }
 
-    // The function that is called on the scroll event
     function handleScroll() {
-        // Update the current scroll position
         scrollPosition = window.scrollY;
-
-        // Request a frame only if one is not already scheduled
         if (!isTicking) {
             window.requestAnimationFrame(updateAnimation);
             isTicking = true;
         }
     }
-
-    // Attach the scroll event listener to update the scrollPosition and request a frame
     window.addEventListener("scroll", handleScroll);
 </script>
   </body>
 </html>
-
-<!--
-  <script>
-    window.addEventListener("scroll", function () {
-      document.getElementById("bg").style.backgroundPositionY = window.scrollY * 0.5 + "px";
-      document.getElementById("title").style.top = window.scrollY * 0.5 + "px";
-    });
-   </script>
-old script
--->
