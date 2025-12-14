@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <pattern x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100" id="pattern-0">
+      <rect x="50" width="50" height="100" style="fill: rgb(0, 255, 201);"/>
+      <rect width="50" height="100" style="stroke-width: 1; fill: rgb(255, 255, 255);"/>
+    </pattern>
+    <pattern id="pattern-0-0" href="#pattern-0" patternTransform="matrix(19.310813, -0.000013, 0.000007, 10.307905, 250.293401, 233.569227)"/>
+  </defs>
+  <ellipse style="stroke: rgb(0, 0, 0); stroke-width: 20; paint-order: fill; fill-rule: nonzero; fill: url(&quot;#pattern-0-0&quot;); transform-box: fill-box; transform-origin: 50% 50%;" cx="250" cy="250" rx="230" ry="230" transform="matrix(-0.707106, -0.707107, 0.707107, -0.707106, 0.000284, 0.000201)"/>
+  <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 20px;" x1="86.579" y1="411.518" x2="411.775" y2="87.671"/>
+</svg>
