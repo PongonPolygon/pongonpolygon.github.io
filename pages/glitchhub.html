@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <!-- why are we DevTools'ing |: -->
   <head>
     <title>GlitchHub | Games</title>
+
+    <!-- some embed bullcrap i think idk -->
+    <meta property="og:title" content="GlitchHub">
+    <meta property="og:description" content="One of the best lightweight game hubs!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/PongonPolygon/pongonpolygon.github.io/02b784e07c9f3fe1ae263933ad7e11bf6193d268/assets/GlitchHubSVG.svg">
+    <meta property="og:url" content="https://pongonpolygon.github.io/pages/glitchhub">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GlitchHub">
+
+    <!-- then to make the website ✨ smexy ✨ -->
     <style>
         @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
         html {
@@ -110,6 +119,7 @@
     </div>
     
     <div class="body">
+      <!-- these buttons are genuenly a pain to work with for some reason -->
       <h2 id="button-body" style="display: none;">
         <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>
         <span id="videosButton" class="button" onclick="toggleSection('videos')">Videos</span>
@@ -295,7 +305,7 @@
           <span class="mintext">(thats all!)</span>
         </div>
 
-        <!-- Movies Section -->
+        <!-- Videos Section -->
         <div id="videos-section" class="main section" style="margin-top: -75px;">
           <p style="line-height: 1.5;">
             <a href="https://drive.google.com/drive/mobile/folders/1d-tAfmr_Qomv86YWrOIcSXHrAoRlkiAo?usp=drive_link">Sonic Movie 1, 2, 3</a><br>
@@ -327,6 +337,7 @@
             <a href="https://dn720206.ca.archive.org/0/items/the.-martian.-2015.-extended.-1080p.-brrip.x-264.-aac-etrg/The.Martian.2015.EXTENDED.1080p.BRRip.x264.AAC-ETRG.mp4">The Martian</a><br>
             <a href="https://ia600309.us.archive.org/10/items/paranorman_202506/ParaNorman.ia.mp4">ParaNorman</a><br>
             <a href="https://drive.google.com/drive/folders/1P9FYrm-9IOsDE61KkCTIAevBkIBkTJxT?sort=13&direction=a">House</a><br>
+            
             <span class="mintext">↓ Watch with an Adblocker ↓</span><br> <!-- PLS USE ADBLOCK OR U GET HACKED -->
             <a href="https://bingewatch.to/series/watch-wednesday-hd-90553">Wednesday</a><br>
             <a href="https://bingewatch.to/watch-series/watch-the-amazing-world-of-gumball-hd-39036">The Amazing World Of Gumball</a><br>
@@ -351,20 +362,24 @@
             <a href="https://bingewatch.to/watch-series/watch-dragon-ball-hd-39541">Dragon Ball</a><br>
             <a href="https://bingewatch.to/watch-series/watch-dragon-ball-z-hd-39524">Dragon Ball Z</a><br>
             <span class="mintext">↑ Watch with an Adblocker ↑</span><br> <!-- PLS USE ADBLOCK OR U GET HACKED -->
+            
           </p>
           <span class="mintext">(thats all!)</span>
         </div>
-    
+
+        <!-- recommendations iframe -->
         <div id="recommend-section" class="main section" style="margin-top: -75px;">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2bkjyClt60SSBiMTeRH3ydn_qzQ-w7plRLmrUaW_VaA-Dyg/viewform?embedded=true" width="640" height="875" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
-    
+
+        <!-- if its slow... -->
         <div id="loading-section" class="main section active" style="margin-top: -75px;">
           <h2 style="color: #777777;">Loading...</h2>
         </div>
       </div>
     </div>
 
+    <!-- ts what i mean the buttons are a ✨ PAIN ✨ -->
     <script>
       function toggleSection(section) {
         document.getElementById("loading-section").classList.remove("active");
@@ -415,6 +430,8 @@
         link.prepend(icon);
       });
     </script>
+
+    <!-- some cool icon that ill prolly remove and just use the LM one later -->
     <script>
       (function() {
         const darkIcon = "../assets/GlitchHub.ico";
@@ -433,6 +450,8 @@
           .addEventListener("change", updateFavicon);
       })();
     </script>
+    
+    <!-- bg and title scrolling -->
     <script>
     let scrollPosition = 0;
     let isTicking = false;
