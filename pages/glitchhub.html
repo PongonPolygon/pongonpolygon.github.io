@@ -133,7 +133,8 @@
 
         <!-- Games Section -->
         <div id="games-section" class="main section" style="margin-top: -75px;">
-          <p style="line-height: 1.5;">
+          <p id="gamecount" class="mintext" style="margin-top: -1px;">Games ()</p>
+          <p id="games" style="line-height: 1.5; margin-top: -10px;">
             <a href="https://tylerpalko.github.io/gamehub/1/">1</a><br>
             <a href="https://tylerpalko.github.io/gamehub/2048/">2048</a><br>
             <a href="https://hczhcz.github.io/Flappy-2048/">Flappy 2048</a><br>
@@ -312,7 +313,8 @@
 
         <!-- Videos Section -->
         <div id="videos-section" class="main section" style="margin-top: -75px;">
-          <p style="line-height: 1.5;">
+          <p id="vidcount" class="mintext" style="margin-top: -1px;">Videos ()</p>
+          <p id="vids" style="line-height: 1.5; margin-top: -10px;">
             <a href="https://drive.google.com/drive/mobile/folders/1d-tAfmr_Qomv86YWrOIcSXHrAoRlkiAo?usp=drive_link">Sonic Movie 1, 2, 3</a><br>
             <a href="https://drive.google.com/drive/u/0/mobile/folders/1w3o_qE2iwsj6XbA42mpGDGLX0Atgnc9k">South Park</a><br>
             <a href="https://dn721908.ca.archive.org/0/items/aqq_20240331/aqq.mp4">Lego Batman Movie</a><br>
@@ -458,24 +460,39 @@
     
     <!-- bg and title scrolling -->
     <script>
-    let scrollPosition = 0;
-    let isTicking = false;
+        let scrollPosition = 0;
+        let isTicking = false;
 
-    function updateAnimation() {
-        document.getElementById("bg").style.backgroundPositionY = scrollPosition * 0.5 + "px";
-        document.getElementById("title").style.top = scrollPosition * 0.25 + "px";
+        function updateAnimation() {
+          document.getElementById("bg").style.backgroundPositionY = scrollPosition * 0.5 + "px";
+          document.getElementById("title").style.top = scrollPosition * 0.25 + "px";
 
-        isTicking = false;
-    }
+          isTicking = false;
+        }
 
-    function handleScroll() {
-        scrollPosition = window.scrollY;
-        if (!isTicking) {
+        function handleScroll() {
+          scrollPosition = window.scrollY;
+          if (!isTicking) {
             window.requestAnimationFrame(updateAnimation);
             isTicking = true;
+          }
         }
-    }
-    window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
+  </script>
+
+<!-- games count -->
+<script>
+  const parent = document.getElementById("games");
+  const count = parent.children.length/2; // /2 because of icons next to the text
+  document.getElementById("gamecount").textContent = "Games (" + count + ")";
 </script>
+
+<!-- videos count -->
+<script>
+  const parent1 = document.getElementById("vids");
+  const count1 = (parent1.children.length/2)-2; //-2 for the adblock warnings
+  document.getElementById("vidcount").textContent = "Videos (" + count1 + ")";
+</script>
+
   </body>
 </html>
