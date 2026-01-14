@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" type="image/x-icon" href="assets/GlitchHubLM.ico">
+    <link rel="icon" type="image/x-icon" href="assets/GlitchHub.ico">
     <title>Home Page</title>
     <meta http-equiv="refresh" content="0; url=https://pongonpolygon.github.io/pages/glitchhub">
     <style>
@@ -36,17 +36,51 @@
         color: #777777;
     </style>
   </head>
-  <body style="display: none;">
+  <body>
     <div>
       <h1>Welcome to my site :3</h1>
-      <p><a href="https://pongonpolygon.github.io/pages/glitchhub">GlitchHub</a></p>
-      <p><a href="https://pongonpolygon.github.io/pages/textadecimal">Textadecimal</a></p>
-      <p><a href="https://pongonpolygon.github.io/pages/ngd">Newgrounds Downloader</a></p>
-      <p><a href="https://pongonpolygon.github.io/pages/previeweditor">Preview Editor</a></p>
+      <h2><u>Web stuff</u></h2>
+      <p>
+        <a href="https://pongonpolygon.github.io/glitchhub">GlitchHub</a><br>
+        <a href="https://pongonpolygon.github.io/pages/textadecimal">Textadecimal</a><br>
+        <a href="https://pongonpolygon.github.io/pages/ngd">Newgrounds Downloader</a><br>
+        <a href="https://pongonpolygon.github.io/pages/previeweditor">Preview Editor</a>
+      </p>
+      <h2><u>Socials</u></h2>
+      <p>
+        <a href="https://youtube.com/@PongonPolygon">Youtube</a><br>
+        <a href="https://discord.com/users/799724320590790667">Discord</a><br>
+        <a href="https://discord.gg/2R3ntt467s">Discord Server</a><br>
+        <a href="https://www.roblox.com/users/2381489325/profile">Roblox</a><br>
+        <a href="https://steamcommunity.com/profiles/76561198764668165">Steam</a><br>
+        <a href="https://open.spotify.com/user/316eis2sviuo3yytrtdnctosdgoq">Spotify</a>
+      </p>
     </div>
 
     <div class="mintext">
       <p>(that's the end...)</p>
     </div>
+    
+    <script>
+      document.querySelectorAll("a").forEach(link => {
+        if (link.querySelector("img")) return;
+        let domain;
+        try {
+          domain = new URL(link.href).origin;
+        } catch {
+          return;
+        }
+        const icon = document.createElement("img");
+        icon.src = `https://www.google.com/s2/favicons?sz=32&domain_url=${domain}`;
+        icon.alt = "favicon";
+        icon.style.width = "1em";
+        icon.style.height = "1em";
+        icon.style.verticalAlign = "middle";
+        icon.style.marginTop = "-.2em";
+        icon.style.marginRight = "6px";
+        icon.style.borderRadius = "25%";
+        link.prepend(icon);
+      });
+    </script>
   </body>
 </html>
