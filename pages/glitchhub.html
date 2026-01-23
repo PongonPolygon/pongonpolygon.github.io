@@ -125,7 +125,7 @@
       <h2 id="button-body" style="display: none;">
         <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>
         <span id="videosButton" class="button" onclick="toggleSection('videos')">Videos</span>
-        <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Recommend</span>
+        <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Forms</span>
       </h2>
       
       <div class="inner">
@@ -465,6 +465,7 @@
         <!-- recommendations iframe -->
         <div id="recommend-section" class="main section" style="margin-top: -75px;">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2bkjyClt60SSBiMTeRH3ydn_qzQ-w7plRLmrUaW_VaA-Dyg/viewform?embedded=true" width="640" height="1014" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXgr2QU1L2I3n6PCFVr231lgiEqL9baA_RFFpleapwdFihRQ/viewform?embedded=true" width="640" height="875" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
 
         <!-- if its slow... -->
@@ -499,7 +500,7 @@
         } else if (section === 'recommend') {
           document.getElementById("recommend-section").classList.add("active");
           document.getElementById("recommendButton").classList.add("active-button");
-          document.title = "GlitchHub | Recommend";
+          document.title = "GlitchHub | Forms";
         }
       }
       document.addEventListener('DOMContentLoaded', function() {
