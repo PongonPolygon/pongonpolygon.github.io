@@ -2,7 +2,7 @@
 <html lang=en> <!-- now aint that cool? -->
   <head>
     <link rel="icon" type="image/x-icon" href="../assets/GlitchHub.ico">
-    <title>GlitchHub | Games</title>
+    <title>GlitchHub | Play</title>
 
     <!-- some embed bullcrap i think idk -->
     <meta property="og:title" content="GlitchHub">
@@ -117,14 +117,14 @@
     
     <div id="title" class="heading">
       <h1 style="position: relative; top: 20px;"><span style="color: #ffffff;">Glitch</span><span style="color: #00ff9c;">Hub</span></h1><br>
-      <p class="mintext" style="position: relative; bottom: 60px;">200+ games & videos for in-class gaming!</p>
+      <p class="mintext" style="position: relative; bottom: 60px;">The Netizen's hub for all things internet.</p>
     </div>
     
     <div class="body">
       <!-- these buttons are genuenly a pain to work with for some reason -->
       <h2 id="button-body" style="display: none;">
-        <span id="gamesButton" class="button" onclick="toggleSection('games')">Games</span>
-        <span id="videosButton" class="button" onclick="toggleSection('videos')">Videos</span>
+        <span id="gamesButton" class="button" onclick="toggleSection('games')">Play</span>
+        <span id="videosButton" class="button" onclick="toggleSection('videos')">Watch</span>
         <span id="recommendButton" class="button" onclick="toggleSection('recommend')">Forms</span>
       </h2>
       
@@ -133,7 +133,7 @@
 
         <!-- Games Section -->
         <div id="games-section" class="main section" style="margin-top: -75px;">
-          <p id="gamecount" class="mintext" style="margin-top: -1px;">Games ()</p>
+          <p id="gamecount" class="mintext" style="margin-top: -1px;"></p>
           <p id="games" style="line-height: 1.5; margin-top: -10px;">
             <a href="https://daocloud.github.io/dao-2048/">2048</a><br>
       			<a href="https://mattpk.github.io/Reverse-2048/">Reverse 2048</a><br>
@@ -408,7 +408,7 @@
 
         <!-- Videos Section -->
         <div id="videos-section" class="main section" style="margin-top: -75px;">
-          <p id="vidcount" class="mintext" style="margin-top: -1px;">Videos ()</p>
+          <p id="vidcount" class="mintext" style="margin-top: -1px;"></p>
           <p id="vids" style="line-height: 1.5; margin-top: -10px;">
             <a href="https://drive.google.com/drive/mobile/folders/1d-tAfmr_Qomv86YWrOIcSXHrAoRlkiAo?usp=drive_link">Sonic Movie 1, 2, 3</a><br>
             <a href="https://drive.google.com/drive/u/0/mobile/folders/1w3o_qE2iwsj6XbA42mpGDGLX0Atgnc9k">South Park</a><br>
@@ -499,6 +499,9 @@
 
         <!-- recommendations iframe -->
         <div id="recommend-section" class="main section" style="margin-top: -75px;">
+          <div style="margin-top: -16px;" class="mintext">
+            <p>Thanks for helping me expand GlitcHub! Also, please don't be a troll.</p>
+          </div>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2bkjyClt60SSBiMTeRH3ydn_qzQ-w7plRLmrUaW_VaA-Dyg/viewform?embedded=true" width="640" height="1014" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe><br>
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXgr2QU1L2I3n6PCFVr231lgiEqL9baA_RFFpleapwdFihRQ/viewform?embedded=true" width="640" height="875" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
@@ -508,7 +511,7 @@
           <h2 style="color: #777777;">Loading...</h2>
         </div>
 
-		<div class="minext" style="font-size: 16px; margin-top: -80px;">
+		<div class="minext" style="font-size: 16px; margin-top: -75px;">
       <div class="clean-line"></div>
       <p class="mintext" style="margin-top: -10px;">Visits:</p>
       <div style="margin-top: -10px;" id="sfck7rcwhd4lnkh2nm3j59bj5zpx8zgbq52"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=k7rcwhd4lnkh2nm3j59bj5zpx8zgbq52&down=async" async></script><br><noscript><a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=k7rcwhd4lnkh2nm3j59bj5zpx8zgbq52" border="0" title="website counter" alt="website counter"></a></noscript>
@@ -534,11 +537,11 @@
         if (section === 'games') {
           document.getElementById("games-section").classList.add("active");
           document.getElementById("gamesButton").classList.add("active-button");
-          document.title = "GlitchHub | Games";
+          document.title = "GlitchHub | Play";
         } else if (section === 'videos') {
           document.getElementById("videos-section").classList.add("active");
           document.getElementById("videosButton").classList.add("active-button");
-          document.title = "GlitchHub | Videos";
+          document.title = "GlitchHub | Watch";
         } else if (section === 'recommend') {
           document.getElementById("recommend-section").classList.add("active");
           document.getElementById("recommendButton").classList.add("active-button");
@@ -626,7 +629,7 @@
 <script>
   const parent1 = document.getElementById("vids");
   const count1 = (parent1.children.length/2)-2; //-2 for the adblock warnings
-  document.getElementById("vidcount").textContent = "Videos (" + count1 + ")";
+  document.getElementById("vidcount").textContent = "Movies & Shows (" + count1 + ")";
 </script>
 
   </body>
